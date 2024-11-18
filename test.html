@@ -6,58 +6,59 @@
   <meta name="description" content="FlexGrid – Die smarte Plattform für flexible Energieverwaltung und Nachhaltigkeit.">
   <title>FlexGrid – Smarte Nachfragesteuerung</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       line-height: 1.6;
     }
     .hero {
-      background: linear-gradient(to bottom right, #3b82f6, #60a5fa);
+      background: linear-gradient(to right, #4f46e5, #60a5fa);
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
+      position: relative;
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    }
+    .hero img {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
     }
     .hero h1 {
       font-size: 3.5rem;
       font-weight: bold;
-      animation: fadeInDown 1s ease-in-out;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     .cta-button {
       background-color: #2563eb;
       color: white;
       padding: 15px 30px;
-      border-radius: 5px;
-      font-size: 1.2rem;
+      border-radius: 30px;
       text-decoration: none;
       margin-top: 20px;
+      font-size: 1.2rem;
       display: inline-block;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
     .cta-button:hover {
       background-color: #1d4ed8;
-      transform: scale(1.05);
-      transition: 0.3s;
+      transform: scale(1.1);
     }
     .feature-card {
       border: none;
-      background: #f9fafb;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      background: white;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .feature-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    .section-header {
-      text-align: center;
-      margin-bottom: 50px;
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
     }
     .cta {
-      background: linear-gradient(to right, #3b82f6, #60a5fa);
+      background: linear-gradient(to left, #4f46e5, #60a5fa);
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -68,15 +69,25 @@
       text-align: center;
       padding: 20px 0;
     }
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #3b82f6;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        clip-path: none;
+      }
+    }
   </style>
 </head>
 <body>
 
 <!-- Hero Section -->
 <header class="hero" data-aos="fade-up">
-  <h1>FlexGrid – Smarte Nachfragesteuerung</h1>
-  <p>Reduzieren Sie Energiekosten, fördern Sie Nachhaltigkeit und nutzen Sie erneuerbare Energie effizienter.</p>
-  <a href="#cta" class="cta-button">Jetzt mehr erfahren</a>
+  <h1>FlexGrid – Ihre Energie, Ihre Zukunft</h1>
+  <p class="lead">Optimieren Sie Ihre Energieeffizienz mit smarter Nachfragesteuerung.</p>
+  <a href="#cta" class="cta-button">Kostenlose Demo starten</a>
 </header>
 
 <!-- Problem und Lösung -->
@@ -84,11 +95,11 @@
   <div class="row align-items-center">
     <div class="col-md-6" data-aos="fade-right">
       <h2>Das Problem</h2>
-      <p>Jährlich gehen 5-10 % der Energie durch Überproduktion verloren. Erneuerbare Energien werden abgeregelt, obwohl sie dringend benötigt werden. Dies führt zu Energieverschwendung und hohen Kosten für Unternehmen und Verbraucher.</p>
+      <p>Bis zu 10 % der erneuerbaren Energie geht verloren, weil sie nicht effizient genutzt wird. Das führt zu Kosten, Energieverschwendung und instabilen Netzen.</p>
     </div>
     <div class="col-md-6" data-aos="fade-left">
-      <h2>Unsere Lösung</h2>
-      <p>FlexGrid optimiert Ihren Energieverbrauch in Echtzeit, speichert überschüssige Energie und bietet die Möglichkeit, diese gewinnbringend zu vermarkten. Das Ergebnis? Weniger Verschwendung, stabile Netze und niedrigere Kosten.</p>
+      <h2>Die Lösung</h2>
+      <p>FlexGrid optimiert die Nutzung erneuerbarer Energien, ermöglicht Speicherung und Vermarktung überschüssiger Energie und sorgt für ein stabileres Netz.</p>
     </div>
   </div>
 </section>
@@ -96,45 +107,34 @@
 <!-- Vorteile -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="section-header" data-aos="zoom-in">
-      <h2>Warum FlexGrid?</h2>
-      <p>Unsere Plattform bietet einzigartige Vorteile, die Ihr Energiemanagement revolutionieren.</p>
-    </div>
+    <h2 class="text-center mb-4">Warum FlexGrid?</h2>
     <div class="row text-center">
       <div class="col-md-3" data-aos="fade-up">
-        <div class="card feature-card">
-          <div class="card-body">
-            <i class="bi bi-piggy-bank fs-1 text-primary"></i>
-            <h4>Kostenersparnis</h4>
-            <p>Optimieren Sie Ihren Verbrauch und sparen Sie durch dynamische Preisanpassungen.</p>
-          </div>
+        <div class="feature-card p-4">
+          <i class="icon fas fa-euro-sign"></i>
+          <h4>Kostenersparnis</h4>
+          <p>Senken Sie Ihre Energiekosten mit flexibler Preisanpassung.</p>
         </div>
       </div>
       <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-        <div class="card feature-card">
-          <div class="card-body">
-            <i class="bi bi-tree fs-1 text-success"></i>
-            <h4>Nachhaltigkeit</h4>
-            <p>Fördern Sie erneuerbare Energien und reduzieren Sie CO₂-Emissionen.</p>
-          </div>
+        <div class="feature-card p-4">
+          <i class="icon fas fa-leaf"></i>
+          <h4>Nachhaltigkeit</h4>
+          <p>Reduzieren Sie Ihren CO₂-Fußabdruck durch smarte Energienutzung.</p>
         </div>
       </div>
       <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-        <div class="card feature-card">
-          <div class="card-body">
-            <i class="bi bi-lightbulb fs-1 text-warning"></i>
-            <h4>Technologie</h4>
-            <p>Profitieren Sie von KI-gestützter Analyse und Echtzeit-Datenverarbeitung.</p>
-          </div>
+        <div class="feature-card p-4">
+          <i class="icon fas fa-brain"></i>
+          <h4>Technologie</h4>
+          <p>Profitieren Sie von KI-gestützten Analysen und Echtzeitdaten.</p>
         </div>
       </div>
       <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-        <div class="card feature-card">
-          <div class="card-body">
-            <i class="bi bi-ui-checks-grid fs-1 text-info"></i>
-            <h4>Benutzerfreundlichkeit</h4>
-            <p>Einfache, intuitive Bedienung für Haushalte und Unternehmen.</p>
-          </div>
+        <div class="feature-card p-4">
+          <i class="icon fas fa-mobile-alt"></i>
+          <h4>Benutzerfreundlichkeit</h4>
+          <p>Einfach und intuitiv – für Haushalte und Unternehmen.</p>
         </div>
       </div>
     </div>
@@ -143,14 +143,14 @@
 
 <!-- Call-to-Action -->
 <section id="cta" class="cta">
-  <h2 data-aos="fade-up">Bereit, die Energiezukunft zu gestalten?</h2>
-  <p data-aos="fade-up" data-aos-delay="100">Fordern Sie jetzt eine kostenlose Demo an und erleben Sie, wie FlexGrid Ihre Energiekosten senkt und Nachhaltigkeit fördert.</p>
-  <a href="#" class="cta-button" data-aos="zoom-in" data-aos-delay="200">Demo starten</a>
+  <h2 data-aos="fade-up">Bereit für die Energiezukunft?</h2>
+  <p data-aos="fade-up" data-aos-delay="100">Erleben Sie FlexGrid in Aktion – kostenlos und unverbindlich.</p>
+  <a href="#" class="cta-button" data-aos="zoom-in" data-aos-delay="200">Jetzt testen</a>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-  <p>&copy; 2024 FlexGrid. Alle Rechte vorbehalten.</p>
+  <p>&copy; 2024 FlexGrid. Ihre Energie, Ihre Zukunft.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
