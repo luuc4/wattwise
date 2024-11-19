@@ -22,11 +22,8 @@
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     }
     .hero img {
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 150px;
+      width: 100px;
+      margin-bottom: 20px;
     }
     .hero h1 {
       font-size: 3.5rem;
@@ -52,6 +49,11 @@
       background: white;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
+      height: 15rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .feature-card:hover {
       transform: translateY(-10px);
@@ -85,9 +87,10 @@
 
 <!-- Hero Section -->
 <header class="hero" data-aos="fade-up">
+  <img src="logo.png" alt="FlexGrid Logo">
   <h1>FlexGrid – Ihre Energie, Ihre Zukunft</h1>
   <p class="lead">Optimieren Sie Ihre Energieeffizienz mit smarter Nachfragesteuerung.</p>
-  <a href="#cta" class="cta-button">Jetzt mehr erfahren!</a>
+  <a href="#cta" class="cta-button">Kostenlose Demo starten</a>
 </header>
 
 <!-- Problem und Lösung -->
@@ -145,7 +148,7 @@
 <section id="cta" class="cta">
   <h2 data-aos="fade-up">Bereit für die Energiezukunft?</h2>
   <p data-aos="fade-up" data-aos-delay="100">Erleben Sie FlexGrid in Aktion – kostenlos und unverbindlich.</p>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1" class="cta-button" data-aos="zoom-in" data-aos-delay="200">Jetzt testen</a>
+  <a href="#" class="cta-button" data-aos="zoom-in" data-aos-delay="200">Jetzt testen</a>
 </section>
 
 <!-- Footer -->
