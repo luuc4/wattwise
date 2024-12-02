@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Metadaten -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WattWise – Energie bewusst nutzen</title>
+  <meta name="description" content="WattWise – Die smarte App für bewusste Energieoptimierung und Nachhaltigkeit.">
+  <meta name="keywords" content="Energie, Nachhaltigkeit, App, Gamification, Strom sparen">
+  <meta name="author" content="WattWise Team">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- CSS Dateien -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Externes CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="logo_wattwise.png" alt="WattWise Logo" width="30" height="30" class="d-inline-block align-top">
+      WattWise
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#hero">Start</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#problem">Problem & Lösung</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#vorteile">Vorteile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cta">Download</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#kontakt">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="hero" class="hero" data-aos="fade-up">
+  <div class="container text-center">
+    <img src="logo_wattwise.png" alt="WattWise Logo" loading="lazy">
+    <h1>WattWise – Ihre Energie bewusst nutzen</h1>
+    <p class="lead">Mit unserer App lernen Sie, wann und wie Sie Energie effizient nutzen können – spielerisch und einfach.</p>
+    <a href="#cta" class="cta-button">Jetzt kostenlos testen</a>
+    <!-- Social Media Icons -->
+    <div class="social-icons mt-4">
+      <a href="https://www.facebook.com/WattWise" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+      <a href="https://www.twitter.com/WattWise" target="_blank" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com/WattWise" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+  </div>
+</header>
+
+<!-- Problem und Lösung -->
+<section id="problem" class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4" data-aos="fade-right">
+      <h2>Das Problem</h2>
+      <p>Viele Haushalte und Unternehmen wissen nicht, wann Energie teuer oder günstig ist. Oft wird Strom unnötig verschwendet, was sowohl Kosten als auch Emissionen erhöht.</p>
+    </div>
+    <div class="col-md-6 mb-4" data-aos="fade-left">
+      <h2>Unsere Lösung</h2>
+      <p>WattWise zeigt Ihnen in Echtzeit, wann es sinnvoll ist, Geräte zu betreiben oder auszuschalten. Mit spielerischen Belohnungen lernen Sie, Energie bewusst und nachhaltig einzusetzen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Gamification Features -->
+<section class="gamification">
+  <div class="container">
+    <h2 class="text-center mb-5">Spielerisch Energie sparen</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 order-md-2 mb-4" data-aos="fade-left">
+        <img src="https://cdn-icons-png.flaticon.com/512/3004/3004353.png" alt="Gamification Beispiel" loading="lazy">
+      </div>
+      <div class="col-md-6 order-md-1 mb-4" data-aos="fade-right">
+        <h4>Belohnungen für nachhaltiges Verhalten</h4>
+        <p>Erreichen Sie Ziele wie "Stromspar-Champion" oder sammeln Sie Punkte für das Ausschalten von Geräten zu Spitzenzeiten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vorteile -->
+<section id="vorteile" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Warum WattWise?</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4" data-aos="fade-up">
+        <div class="feature-card p-4">
+          <i class="icon fas fa-euro-sign"></i>
+          <h4>Kosten sparen</h4>
+          <p>Erfahren Sie genau, wann Strompreise am günstigsten sind.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card p-4">
+          <i class="icon fas fa-leaf"></i>
+          <h4>Nachhaltig handeln</h4>
+          <p>Reduzieren Sie Emissionen durch bewusste Energieentscheidungen.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card p-4">
+          <i class="icon fas fa-gamepad"></i>
+          <h4>Gamification</h4>
+          <p>Motivieren Sie sich durch spielerische Belohnungen und Herausforderungen.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-card p-4">
+          <i class="icon fas fa-mobile-alt"></i>
+          <h4>Einfach & intuitiv</h4>
+          <p>Nutzen Sie unsere App – überall und jederzeit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action -->
+<section id="cta" class="cta">
+  <div class="container text-center">
+    <h2 data-aos="fade-up">Werden Sie Teil der Energie-Revolution!</h2>
+    <p data-aos="fade-up" data-aos-delay="100">Testen Sie WattWise und entdecken Sie, wie einfach nachhaltiges Handeln sein kann.</p>
+    <a href="#" class="cta-button" data-aos="zoom-in" data-aos-delay="200">App jetzt herunterladen</a>
+  </div>
+</section>
+
+<!-- Kontaktformular -->
+<section id="kontakt" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Kontaktieren Sie uns</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form action="#" method="post" data-aos="fade-up">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name*</label>
+            <input type="text" class="form-control" id="name" name="name" required aria-required="true">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-Mail*</label>
+            <input type="email" class="form-control" id="email" name="email" required aria-required="true">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Nachricht*</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required aria-required="true"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Nachricht senden</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container text-center">
+    <p>&copy; 2024 WattWise. Gemeinsam für eine nachhaltige Zukunft.</p>
+    <div class="footer-links">
+      <a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Animation JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- Eigenes Script -->
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  // Navbar beim Scrollen ändern
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>
