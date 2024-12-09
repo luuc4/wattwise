@@ -19,26 +19,78 @@ section {
 
 /* Navigation */
 .navbar {
-    background: rgba(59, 130, 246, 0.9);
-    transition: background 0.3s ease-in-out;
+    /* Leicht transparenter Farbverlauf mit weichen Übergängen */
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.85), rgba(96, 165, 250, 0.85));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    /* Transition etwas verlängert für einen noch weicheren Übergang */
+    transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
+
 .navbar.scrolled {
-    background: rgba(59, 130, 246, 1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Beim Scrollen etwas dunklerer und kräftigerer Verlauf */
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+/* Navbar-Brand zentrieren */
 .navbar-brand {
-    color: #374151;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #374151 !important;
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;  /* Sorgt für vertikale Zentrierung */
+    gap: 0.5rem;          /* Kleiner Abstand zwischen Logo und Text */
 }
+
 .navbar-brand:hover {
-    color: #1f2937;
+    color: #dbeafe !important;
 }
+
+/* Navigation-Links */
 .nav-link {
+    color: #ffffff !important;
     font-weight: 500;
     margin-right: 15px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 50%;
+}
+
 .nav-link:hover {
-    color: #dbeafe;
+    color: #dbeafe !important;
+}
+
+/* Navbar-Toggler (Hamburger-Icon) leicht vergrößerbar bei Hover */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    outline: none;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar-toggler:hover {
+    transform: scale(1.1);
+}
+
+/* Für kleine Bildschirme: Dropdown-Links */
+.navbar-nav .show > .nav-link {
+    background-color: rgba(255,255,255,0.1);
 }
 
 /* Hero Section */
