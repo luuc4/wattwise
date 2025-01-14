@@ -4,6 +4,7 @@
     --primary-color-dark: #2563eb;
     --secondary-color: #60a5fa;
     --background-color: #f8fafc;
+    --peach-color: #ffbd59;
 }
 
 /* Basis-Stile */
@@ -45,7 +46,7 @@ section {
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #374151 !important;
+    color: var(--peach-color) !important;
     transition: color 0.3s ease-in-out;
     display: flex;
     align-items: center;  /* Sorgt für vertikale Zentrierung */
@@ -110,10 +111,7 @@ section {
     position: relative;
     overflow: hidden;
 }
-.hero img {
-    width: 120px;
-    margin-bottom: 20px;
-}
+
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
