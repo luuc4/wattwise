@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <!-- Metadaten -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WattWise – Energie bewusst nutzen</title>
-  <meta name="description" content="WattWise – Die smarte App für bewusste Energieoptimierung und Nachhaltigkeit. Erfahren Sie, wann und wie Sie Energie effizient nutzen können.">
-  <meta name="keywords" content="Energie, Nachhaltigkeit, App, Gamification, Strom sparen">
+  <title>WattWise – Die smarte App für nachhaltige Energienutzung</title>
+  <meta name="description" content="WattWise zeigt Ihnen in Echtzeit, wann Strom günstig und nachhaltig verfügbar ist. Sparen Sie Kosten, reduzieren Sie Emissionen und profitieren Sie von spielerischen Herausforderungen.">
+  <meta name="keywords" content="Energie, Nachhaltigkeit, App, Gamification, Strom sparen, Stromnetz">
   <meta name="author" content="WattWise Team">
   <link rel="icon" href="favicon.ico">
 
-  <!-- CSS Dateien -->
   <!-- Bootstrap CSS -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+          rel="preload"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'"
+  >
+  <noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </noscript>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Roboto + Raleway -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Beispielsweise eine zweite Schrift für Überschriften -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@600&display=swap" rel="stylesheet">
+  <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@600&display=swap"
+          rel="stylesheet"
+  >
 
-  <!-- Externes CSS -->
+  <!-- Externe CSS -->
   <link rel="stylesheet" href="styles.css">
 
   <!-- AOS Animation CSS -->
@@ -31,112 +38,116 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-<header>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow" role="navigation">
-    <div class="container">
-      <a class="navbar-brand" href="#" aria-label="Startseite">
-        <!-- Aussagekräftiger Alt-Text -->
-        <img src="logo_notext.svg" alt="WattWise - Logo: Eine Glühbirne als Symbol für intelligente Energie" width="auto" height="40" class="d-inline-block align-top">
-        WattWise
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#hero">Start</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#problem">Problem &amp; Lösung</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#zielgruppe">Zielgruppen</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#vorteile">Vorteile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cta">Download</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#kontakt">Kontakt</a>
-          </li>
-        </ul>
-      </div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow" role="navigation">
+  <div class="container">
+    <a class="navbar-brand" href="#" aria-label="Startseite">
+      <img src="logo_notext.svg" alt="WattWise - Glühbirnen-Logo" width="auto" height="40" class="d-inline-block align-top">
+      <!-- Statt einer eigenen Schrift hier „WattWise“ via Raleway -->
+      <span class="ms-2 brand-text">WattWise</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#hero">Start</a></li>
+        <li class="nav-item"><a class="nav-link" href="#problem">Problem &amp; Lösung</a></li>
+        <li class="nav-item"><a class="nav-link" href="#zielgruppe">Zielgruppen</a></li>
+        <li class="nav-item"><a class="nav-link" href="#vorteile">Vorteile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cta">Download</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+      </ul>
     </div>
-  </nav>
-</header>
+  </div>
+</nav>
 
 <main>
   <!-- Hero Section -->
-  <section id="hero" class="hero" data-aos="fade-up">
-    <div class="container text-center">
-      <!-- Lazy Loading und aussagekräftiger alt-Text -->
-      <img src="logo_text.svg" alt="WattWise - App-Logo: Symbol für nachhaltige Energienutzung" loading="lazy">
-      <h1>WattWise – Ihre Energie bewusst nutzen</h1>
-      <p class="lead">Mit unserer App erfahren Sie transparent, wann und wie Sie Energie effizient nutzen können – spielerisch und einfach.</p>
-      <a href="#cta" class="cta-button">Jetzt kostenlos testen</a>
-      <!-- Social Media Icons mit aria-label -->
+  <section id="hero" class="hero min-vh-100 d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
+    <div class="container">
+      <img src="logo_text.svg" alt="WattWise App-Logo: Symbol für nachhaltige Energienutzung" loading="lazy" class="mb-4">
+      <h1 class="display-4 fw-bold">WattWise – Ihre Energie bewusst nutzen</h1>
+      <p class="lead">Transparente Echtzeit-Infos zu Strompreisen und Nachhaltigkeit. Gamification macht das Energiesparen noch einfacher.</p>
+      <a href="#cta" class="btn btn-lg btn-light shadow mt-3" data-aos="zoom-in" data-aos-delay="200">Jetzt kostenlos testen</a>
+      <!-- Social Media Icons -->
       <div class="social-icons mt-4">
-        <a href="https://www.facebook.com/WattWise" target="_blank" rel="noopener" aria-label="WattWise auf Facebook besuchen"><i class="fab fa-facebook-f fa-2x"></i></a>
-        <a href="https://www.twitter.com/WattWise" target="_blank" rel="noopener" aria-label="WattWise auf Twitter besuchen"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://www.instagram.com/WattWise" target="_blank" rel="noopener" aria-label="WattWise auf Instagram besuchen"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.facebook.com/WattWise" target="_blank" rel="noopener" aria-label="WattWise auf Facebook besuchen">
+          <i class="fab fa-facebook-f fa-2x mx-2"></i>
+        </a>
+        <a href="https://www.twitter.com/WattWise" target="_blank" rel="noopener" aria-label="WattWise auf Twitter besuchen">
+          <i class="fab fa-twitter fa-2x mx-2"></i>
+        </a>
+        <a href="https://www.instagram.com/WattWise" target="_blank" rel="noopener" aria-label="WattWise auf Instagram besuchen">
+          <i class="fab fa-instagram fa-2x mx-2"></i>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Problem und Lösung -->
-  <section id="problem" class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4" data-aos="fade-right">
-        <h2>Das Problem</h2>
-        <p>
-          Stromnetzbetreiber stehen vor der Herausforderung, Überkapazitäten und Netzinstabilitäten effizient zu managen. Endkunden fehlt oft das Bewusstsein für die optimale Energienutzung, da Preise und Verfügbarkeiten nicht transparent sind.
-        </p>
-      </div>
-      <div class="col-md-6 mb-4" data-aos="fade-left">
-        <h2>Unsere Lösung</h2>
-        <p>
-          WattWise hilft Stromnetzbetreibern, Netzüberlastungen zu vermeiden, indem es Endkunden motiviert, ihren Energieverbrauch in Echtzeit anzupassen. Die App bietet klare Informationen zu Energieverfügbarkeit und nachhaltiger Nutzung – unterstützt durch spielerische Elemente.
-        </p>
+  <section id="problem" class="py-3 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4" data-aos="fade-right">
+          <h2>Das Problem</h2>
+          <p>
+            Stromnetzbetreiber stehen vor der Herausforderung, Überkapazitäten und Netzinstabilitäten effektiv zu managen.
+            Endkunden fehlt oft das Bewusstsein für die optimale Energienutzung, weil aktuelle Preise und Verfügbarkeiten nicht sichtbar sind.
+          </p>
+        </div>
+        <div class="col-md-6 mb-4" data-aos="fade-left">
+          <h2>Unsere Lösung</h2>
+          <p>
+            Mit WattWise erhalten Nutzer Echtzeit-Informationen zu Strompreisen und Netzbelastung. So können sie ihren Verbrauch
+            kostensparend und umweltfreundlich anpassen. Gamification-Elemente motivieren zusätzlich, nachhaltige Entscheidungen zu treffen.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Trennlinie -->
+  <hr class="section-divider my-3">
+
   <!-- Gamification Features -->
-  <section class="gamification py-5">
+  <section class="gamification py-3 bg-light">
     <div class="container">
-      <h2 class="text-center mb-5">Spielerisch Energie sparen</h2>
+      <h2 class="text-center mb-5" data-aos="fade-up">Spielerisch Energie sparen</h2>
       <div class="row align-items-center">
-        <div class="col-md-4 order-md-2 mb-4" data-aos="fade-left">
-          <!-- Aussagekräftiger alt-Text -->
-          <img src="trophy.png" alt="Icon: Pokal, symbolisiert Erreichung eines bestimmten Ziels in der App" loading="lazy">
+        <div class="col-md-4 order-md-2 mb-4 text-center" data-aos="fade-left">
+          <img src="trophy.png" alt="Pokal-Icon" loading="lazy" width="150" height="auto">
         </div>
         <div class="col-md-8 order-md-1 mb-4" data-aos="fade-right">
           <h4>Belohnungen für nachhaltiges Verhalten</h4>
-          <p>Erreichen Sie Ziele wie "Stromspar-Champion" oder sammeln Sie Punkte für das Ausschalten von Geräten zu Spitzenzeiten.</p>
+          <p>
+            Sammeln Sie Punkte für das Ausschalten von Geräten zu Spitzenzeiten oder werden Sie "Stromspar-Champion".
+            Unsere App integriert ein Belohnungssystem, das Umweltbewusstsein fördert und gleichzeitig Spaß macht.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="zielgruppe" class="py-5 bg-light">
+  <!-- Trennlinie -->
+  <hr class="section-divider my-3">
+
+  <!-- Zielgruppen -->
+  <section id="zielgruppe" class="py-3">
     <div class="container">
-      <h2 class="text-center mb-4">Unsere Zielgruppen</h2>
+      <h2 class="text-center mb-4" data-aos="fade-up">Unsere Zielgruppen</h2>
       <div class="row text-center">
         <div class="col-md-6 mb-4" data-aos="fade-up">
-          <div class="feature-card p-4">
-            <i class="icon fas fa-user" aria-hidden="true"></i>
+          <div class="feature-card p-4 shadow">
+            <i class="fas fa-user fa-2x mb-3" aria-hidden="true"></i>
             <h4>Endkunden</h4>
             <p>Haushalte und Unternehmen, die ihre Energiekosten senken und nachhaltiger handeln möchten.</p>
           </div>
         </div>
         <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card p-4">
-            <i class="icon fas fa-industry" aria-hidden="true"></i>
+          <div class="feature-card p-4 shadow">
+            <i class="fas fa-industry fa-2x mb-3" aria-hidden="true"></i>
             <h4>Stromnetzbetreiber</h4>
             <p>Netzbetreiber, die Überkapazitäten effizient managen und Netzstabilität sichern möchten.</p>
           </div>
@@ -145,37 +156,71 @@
     </div>
   </section>
 
+  <!-- Trennlinie -->
+  <hr class="section-divider my-3">
+
   <!-- Vorteile -->
-  <section id="vorteile" class="py-5 bg-light">
+  <section id="vorteile" class="py-3 bg-light">
     <div class="container">
-      <h2 class="text-center mb-5">Warum WattWise?</h2>
+      <h2 class="text-center mb-5" data-aos="fade-up">Warum WattWise?</h2>
       <div class="row text-center">
         <div class="col-md-3 mb-4" data-aos="fade-up">
-          <div class="feature-card p-4">
-            <i class="icon fas fa-euro-sign" aria-hidden="true"></i>
+          <div class="feature-card p-4 shadow">
+            <i class="fas fa-euro-sign fa-2x mb-2" aria-hidden="true"></i>
             <h4>Kosten sparen</h4>
-            <p>Erfahren Sie genau, wann Strompreise am günstigsten sind.</p>
+            <p>Erfahren Sie genau, wann Strompreise am günstigsten sind und sparen Sie bares Geld.</p>
           </div>
         </div>
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card p-4">
-            <i class="icon fas fa-leaf" aria-hidden="true"></i>
+          <div class="feature-card p-4 shadow">
+            <i class="fas fa-leaf fa-2x mb-2" aria-hidden="true"></i>
             <h4>Nachhaltig handeln</h4>
-            <p>Reduzieren Sie Emissionen durch bewusste Energieentscheidungen.</p>
+            <p>Reduzieren Sie Emissionen durch bewusste Energieentscheidungen und ein flexibles Verbrauchsverhalten.</p>
           </div>
         </div>
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card p-4">
-            <i class="icon fas fa-gamepad" aria-hidden="true"></i>
+          <div class="feature-card p-4 shadow">
+            <i class="fas fa-gamepad fa-2x mb-2" aria-hidden="true"></i>
             <h4>Gamification</h4>
-            <p>Motivieren Sie sich durch spielerische Belohnungen und Herausforderungen.</p>
+            <p>Sammeln Sie Punkte, schließen Sie Herausforderungen ab und teilen Sie Ihre Erfolge mit Freunden.</p>
           </div>
         </div>
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card p-4">
-            <i class="icon fas fa-mobile-alt" aria-hidden="true"></i>
+          <div class="feature-card p-4 shadow">
+            <i class="fas fa-mobile-alt fa-2x mb-2" aria-hidden="true"></i>
             <h4>Einfach &amp; intuitiv</h4>
-            <p>Nutzen Sie unsere App – überall und jederzeit.</p>
+            <p>Mit unserer benutzerfreundlichen App behalten Sie Ihre Energie jederzeit im Blick.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trennlinie -->
+  <hr class="section-divider my-3">
+
+  <!-- Neuer Abschnitt: Testimonials -->
+  <section class="py-3 mb-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Das sagen unsere Nutzer</h2>
+      <div class="row g-4">
+        <!-- Die Testimonial-Cards bekommen nun auch eine Hover-Animation wie die anderen Cards -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="testimonial feature-card p-4 shadow">
+            <p>"Seit ich WattWise nutze, habe ich meine Stromrechnung um 15% gesenkt. Das Punktesystem macht richtig Spaß!"</p>
+            <h5 class="mt-3">– Anna, 32</h5>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial feature-card p-4 shadow">
+            <p>"Endlich weiß ich, wann der Strom wirklich grün ist. Toll, dass meine Kids durch die Challenges auch begeistert mitmachen."</p>
+            <h5 class="mt-3">– Jonas, 40</h5>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial feature-card p-4 shadow">
+            <p>"Super einfach zu bedienen. Die App zeigt mir direkt an, wie ich Kosten sparen kann. Funktioniert perfekt."</p>
+            <h5 class="mt-3">– Martina, 28</h5>
           </div>
         </div>
       </div>
@@ -183,21 +228,22 @@
   </section>
 
   <!-- Call-to-Action -->
-  <section id="cta" class="cta">
-    <div class="container text-center">
-      <h2 data-aos="fade-up">Werden Sie Teil der Energie-Revolution!</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Testen Sie WattWise und entdecken Sie, wie einfach nachhaltiges Handeln sein kann.</p>
-      <a href="#" class="cta-button" data-aos="zoom-in" data-aos-delay="200">App jetzt herunterladen</a>
+  <section id="cta" class="cta py-5 bg-primary text-white text-center">
+    <div class="container" data-aos="fade-up">
+      <h2 class="mb-3">Werden Sie Teil der Energie-Revolution!</h2>
+      <p class="mb-4">Testen Sie WattWise und entdecken Sie, wie einfach nachhaltiges Handeln sein kann.</p>
+      <!-- Externer Link zu einer Testseite -->
+      <a href="https://testseite.de" class="btn btn-lg btn-light shadow" data-aos="zoom-in" data-aos-delay="100">App jetzt herunterladen</a>
     </div>
   </section>
 
   <!-- Kontaktformular -->
-  <section id="kontakt" class="py-5">
+  <section id="kontakt" class="py-3 mt-5">
     <div class="container">
-      <h2 class="text-center mb-5">Kontaktieren Sie uns</h2>
+      <h2 class="text-center mb-5" data-aos="fade-up">Kontaktieren Sie uns</h2>
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <form action="#" method="post" data-aos="fade-up">
+          <form action="#" method="post" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-3">
               <label for="name" class="form-label">Name*</label>
               <input type="text" class="form-control" id="name" name="name" required aria-required="true">
@@ -218,11 +264,14 @@
   </section>
 </main>
 
-<footer class="footer" role="contentinfo">
+<!-- Footer -->
+<footer class="footer py-3 bg-light">
   <div class="container text-center">
-    <p>&copy; 2024 WattWise. Gemeinsam für eine nachhaltige Zukunft.</p>
+    <p class="mb-2">&copy; 2024 WattWise. Gemeinsam für eine nachhaltige Zukunft.</p>
     <div class="footer-links">
-      <a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">AGB</a>
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a> |
+      <a href="agb.html">AGB</a>
     </div>
   </div>
 </footer>
@@ -251,6 +300,5 @@
     });
   });
 </script>
-
 </body>
 </html>

@@ -1,60 +1,85 @@
-/* Definieren Sie Farbvariablen */
+/* =========================
+   Farb- und Style-Variablen
+   ========================= */
 :root {
-    --primary-color-light: #3b82f6;
-    --primary-color-dark: #2563eb;
-    --secondary-color: #60a5fa;
-    --background-color: #f8fafc;
-    --peach-color: #ffbd59;
+    --primary-color-light: #3b82f6;    /* Hellblau */
+    --primary-color-dark:  #2563eb;    /* Dunkleres Blau */
+    --secondary-color:     #60a5fa;    /* Sekundärblau (zw. Hell-/Dunkelblau) */
+    --background-color:    #f8fafc;    /* Helles Grau/Weiß */
+    --peach-color:         #ffbd59;    /* Pfirsich-Farbe */
+    --text-color:          #1f2937;    /* Dunkles Textgrau */
 }
 
-/* Basis-Stile */
+/* =========================
+   Grundlegende Stile
+   ========================= */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin-top: 56px; /* Platz für die feste Navigationsleiste */
     background-color: var(--background-color);
-    color: #1f2937;
+    color: var(--text-color);
 }
 
-/* Zusätzliche Schriftart für Überschriften */
-h1, h2, h3, h4, h5, h6 {
+/* Raleway für Headlines, Navbar-Brand, etc. */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand, .brand-text, .nav-link {
     font-family: 'Raleway', sans-serif;
 }
 
-/* Anpassung des Scrollverhaltens */
+/* Scroll-Offset für Ankerlinks */
 section {
-    scroll-margin-top: 70px; /* Höhe der Navigationsleiste + etwas Abstand */
+    scroll-margin-top: 70px; /* Höhe der Navigation + etwas Abstand */
 }
 
-/* Navigation */
+/* =========================
+   Navigation
+   ========================= */
 .navbar {
-    /* Leicht transparenter Farbverlauf mit weichen Übergängen */
-    background: linear-gradient(to right, rgba(59, 130, 246, 0.85), rgba(96, 165, 250, 0.85));
+    /* Semitransparenter Farbverlauf mit Blur-Effekt */
+    background: linear-gradient(
+            to right,
+            rgba(59, 130, 246, 0.85),
+            rgba(96, 165, 250, 0.85)
+    );
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255,255,255,0.2);
-    /* Transition etwas verlängert für einen noch weicheren Übergang */
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
+/* Beim Scrollen etwas dunklerer Verlauf */
 .navbar.scrolled {
-    /* Beim Scrollen etwas dunklerer und kräftigerer Verlauf */
-    background: linear-gradient(to right, var(--primary-color-light), var(--primary-color-dark));
+    background: linear-gradient(
+            to right,
+            var(--primary-color-light),
+            var(--primary-color-dark)
+    );
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Navbar-Brand zentrieren */
+/* Navbar-Brand: Logo + Text */
 .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff !important;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--peach-color) !important;
     transition: color 0.3s ease-in-out;
-    display: flex;
-    align-items: center;  /* Sorgt für vertikale Zentrierung */
-    gap: 0.5rem;          /* Kleiner Abstand zwischen Logo und Text */
 }
 
 .navbar-brand:hover {
-    color: #dbeafe !important;
+    color: var(--peach-color) !important;
+}
+
+/* Brand-Text falls separat (z.B. span.brand-text) */
+.brand-text {
+    font-size: 1.4rem;
+    color: inherit; /* erbt vom navbar-brand */
 }
 
 /* Navigation-Links */
@@ -66,6 +91,7 @@ section {
     transition: color 0.3s ease-in-out;
 }
 
+/* Kleiner Hover-Effekt unter dem Nav-Link */
 .nav-link::after {
     content: "";
     position: absolute;
@@ -78,15 +104,15 @@ section {
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
-    width: 50%;
-}
-
 .nav-link:hover {
     color: #dbeafe !important;
 }
 
-/* Navbar-Toggler (Hamburger-Icon) leicht vergrößerbar bei Hover */
+.nav-link:hover::after {
+    width: 50%;
+}
+
+/* Hamburger-Icon in kleineren Screens */
 .navbar-toggler {
     border: none;
     background: transparent;
@@ -97,88 +123,27 @@ section {
     transform: scale(1.1);
 }
 
-/* Für kleine Bildschirme: Dropdown-Links */
-.navbar-nav .show > .nav-link {
-    background-color: rgba(255,255,255,0.1);
-}
-
-/* Hero Section */
+/* =========================
+   Hero Section
+   ========================= */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color-light) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg,
+    var(--primary-color-light) 0%,
+    var(--secondary-color) 100%);
     color: white;
     text-align: center;
     padding: 150px 20px 100px;
     position: relative;
     overflow: hidden;
 }
-
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
 }
-.cta {
-    background: linear-gradient(135deg, var(--primary-color-dark) 0%, var(--secondary-color) 100%);
-}
-.cta-button {
-    background-color: var(--primary-color-dark);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-top: 30px;
-    font-size: 1.2rem;
-    display: inline-block;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.cta-button:hover {
-    background-color: var(--primary-color-light);
-    transform: scale(1.05);
-}
 
-/* Social Icons */
-.social-icons a {
-    color: white;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-.social-icons a:hover {
-    color: #d1d5db;
-}
-
-/* Feature Cards */
-.feature-card {
-    border: none;
-    background: white;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding: 30px 20px;
-    border-radius: 10px;
-    height: 100%;
-}
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
-}
-.feature-card h4 {
-    margin-top: 15px;
-    font-weight: 600;
-}
-.feature-card p {
-    margin-top: 10px;
-    color: #6b7280;
-}
-
-/* Icons */
-.icon {
-    font-size: 3rem;
-    color: #3b82f6;
-    transition: color 0.3s ease;
-}
-.feature-card:hover .icon {
-    color: #2563eb;
-}
-
-/* Gamification Section */
+/* =========================
+   Gamification
+   ========================= */
 .gamification {
     background-color: #eff6ff;
     padding: 80px 20px;
@@ -190,9 +155,50 @@ section {
     border-radius: 10px;
 }
 
-/* CTA Section */
+/* =========================
+   Trennlinien (Section Divider)
+   ========================= */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin: 2rem 0;
+}
+
+/* =========================
+   Feature Cards & Testimonials
+   ========================= */
+/* Gemeinsamer Card-Look */
+.feature-card, .testimonial {
+    border: none;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+.feature-card:hover,
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+.feature-card h4,
+.testimonial h4 {
+    margin-top: 15px;
+    font-weight: 600;
+}
+.feature-card p,
+.testimonial p {
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+/* =========================
+   CTA Section
+   ========================= */
 .cta {
-    background: linear-gradient(135deg, #4f46e5 0%, #60a5fa 100%);
+    background: linear-gradient(135deg, var(--primary-color-dark) 0%, var(--secondary-color) 100%);
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -205,11 +211,24 @@ section {
     font-size: 1.2rem;
     margin-top: 20px;
 }
-
-/* Kontaktformular */
-#kontakt {
-    background-color: #f1f5f9;
+.cta .btn {
+    background-color: #fff;
+    color: var(--primary-color-dark);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
+.cta .btn:hover {
+    background-color: #f1f5f9;
+    color: var(--primary-color-light);
+    transform: scale(1.05);
+}
+
+/* =========================
+   Kontaktformular
+   ========================= */
 #kontakt h2 {
     font-weight: 700;
 }
@@ -217,17 +236,19 @@ section {
     border-radius: 0.5rem;
 }
 #kontakt .btn-primary {
-    background-color: #2563eb;
+    background-color: var(--primary-color-dark);
     border: none;
     padding: 10px 20px;
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
 }
 #kontakt .btn-primary:hover {
-    background-color: #1d4ed8;
+    background-color: var(--primary-color-light);
 }
 
-/* Footer */
+/* =========================
+   Footer
+   ========================= */
 .footer {
     background: #1f2937;
     color: #d1d5db;
@@ -245,9 +266,12 @@ section {
 }
 .footer-links a:hover {
     color: #ffffff;
+    text-decoration: underline;
 }
 
-/* Responsive Anpassungen */
+/* =========================
+   Responsive
+   ========================= */
 @media (max-width: 768px) {
     .hero {
         padding: 100px 20px 80px 20px;
