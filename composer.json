@@ -1,7 +1,0 @@
-{
-    "name": "wattwise/beta-signup",
-    "description": "WattWise Beta Signup System",
-    "require": {
-        "phpmailer/phpmailer": "^6.8"
-    }
-}
