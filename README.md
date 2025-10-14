@@ -15,6 +15,9 @@ Die WattWise Beta-Landing Page verwendet jetzt Formspree für die Verarbeitung v
 - **Beta-Anmeldung**: Formular in `index.html` sendet direkt an Formspree
 - **Newsletter**: Footer-Formular sendet ebenfalls an Formspree
 - **Admin Dashboard**: `admin.html` zeigt Formspree-Link zum Dashboard
+  - **Basic Authentication**: Passwort-geschützt (Passwort: `wattwise2025`)
+  - Session-basierte Authentifizierung
+  - Zugriff nur nach erfolgreicher Anmeldung
 
 ## Features
 
@@ -113,6 +116,23 @@ curl -X POST \
 - Regelmäßige Updates des Webservers
 - HTTPS-Zertifikat verwenden
 - Content Security Policy implementieren
+- Admin-Dashboard mit Basic Authentication geschützt
+
+## Branding & Design
+
+Die komplette Branding-Dokumentation ist in `BRANDING.md` verfügbar:
+- Farbpalette und CSS-Variablen
+- Typografie (Poppins)
+- Logo-Verwendung
+- UI-Elemente
+- Social Media Guidelines
+
+## Rechtliches
+
+Die Impressum-Seite (`impressum.html`) enthält alle rechtlich erforderlichen Informationen gemäß österreichischem Recht:
+- Medieninhaber: Fachhochschule Vorarlberg GmbH
+- Projektverantwortung: Marc Reutz, Hirma 10, 6841 Mäder
+- Alle erforderlichen Angaben nach §5 E-Commerce Gesetz und §25 Mediengesetz
 
 ---
 
@@ -124,3 +144,8 @@ curl -X POST \
 - ✅ Alle E-Mail-bezogenen PHP-Dateien gelöscht
 - ✅ Admin-Dashboard auf Formspree umgestellt
 - ✅ Dokumentation aktualisiert
+- ✅ BRANDING.md erstellt mit vollständiger Branding-Dokumentation
+- ✅ Impressum nach österreichischem Recht hinzugefügt
+- ✅ Basic Authentication für Admin-Dashboard implementiert
+- ✅ Unnötige Dateien entfernt (composer.json, .idea/)
+- ✅ Projekt bereit für Go-Live
