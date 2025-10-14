@@ -68,8 +68,9 @@ WattWise is an intelligent energy management platform helping users save energy 
 ## Logo
 
 ### Logo Components
-- **Icon**: Lightning bolt (⚡) - `<i class="fas fa-bolt"></i>`
-  - Color: Primary Green (#00c389)
+- **Icon**: Logo image (`logo.png`)
+  - Format: PNG with transparency
+  - Recommended display height: 30px in navbar
   
 - **Text**: "Watt**Wise**"
   - Font: Poppins, Weight: 700
@@ -78,9 +79,13 @@ WattWise is an intelligent energy management platform helping users save energy 
 
 ### Logo Usage
 ```html
-<i class="fas fa-bolt me-2" style="color: #00c389;"></i>
+<img src="logo.png" alt="WattWise Logo" class="navbar-logo">
 <span style="font-weight: 700;">Watt<span style="color: #00c389;">Wise</span></span>
 ```
+
+### Logo Sizing
+- Navbar: `height: 30px; width: auto;`
+- Favicon: Use `favicon.ico` for browser tab icon
 
 ---
 

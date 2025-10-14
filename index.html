@@ -38,11 +38,19 @@
 
     .navbar {
       transition: all 0.3s ease-in-out;
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
     }
 
     .navbar-scrolled {
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
       background-color: #fff !important;
+    }
+
+    .navbar-logo {
+      height: 30px;
+      width: auto;
+      margin-right: 10px;
     }
 
     .btn-primary {
@@ -423,10 +431,10 @@
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent position-fixed w-100" style="z-index: 1000;">
+<nav class="navbar navbar-expand-lg navbar-light position-fixed w-100" style="z-index: 1000;">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <i class="fas fa-bolt me-2" style="color: var(--primary-color);"></i>
+      <img src="logo.png" alt="WattWise Logo" class="navbar-logo">
       <span style="font-weight: 700;">Watt<span style="color: var(--primary-color);">Wise</span></span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -887,7 +895,11 @@
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
-        targetElement.scrollIntoView({
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = targetElement.offsetTop - navbarHeight - 20; // 20px extra padding
+        
+        window.scrollTo({
+          top: targetPosition,
           behavior: 'smooth'
         });
       }
